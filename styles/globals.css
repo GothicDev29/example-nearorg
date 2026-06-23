@@ -1,0 +1,98 @@
+/* Base resets and typography using design tokens */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  font-weight: var(--font-weight-body);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+}
+
+/* Nav */
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--section-padding-h);
+  background: var(--color-bg-dark);
+  border-bottom: 1px solid var(--color-border-dark);
+  z-index: 100;
+}
+
+.site-nav a {
+  color: var(--color-text-on-dark);
+  text-decoration: none;
+  font-size: var(--font-size-small);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  opacity: 0.7;
+  transition: opacity var(--btn-primary-transition);
+}
+
+.site-nav a:hover {
+  opacity: 1;
+}
+
+.site-nav .nav-brand {
+  font-family: var(--font-family-secondary);
+  font-size: 15px;
+  font-weight: 600;
+  opacity: 1;
+  margin-right: 32px;
+  color: var(--color-accent);
+}
+
+.site-nav .nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.main-content {
+  padding-top: var(--nav-height);
+}
+
+/* Button — secondary style */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: var(--btn-secondary-bg);
+  color: var(--btn-secondary-color);
+  border: var(--btn-secondary-border);
+  border-radius: var(--btn-secondary-radius);
+  font-family: var(--font-family-primary);
+  font-size: var(--btn-primary-font-size);
+  font-weight: var(--btn-primary-font-weight);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background var(--btn-primary-transition), color var(--btn-primary-transition);
+}
+
+.btn-secondary:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,93 @@
+:root {
+
+  /* COLORES — FONDOS */
+  --color-bg-primary: #ffffff;
+  --color-bg-dark: #000000;
+  --color-bg-cream: #faf9f5;
+  --color-bg-warm-white: #fffdf6;
+
+  /* COLORES — TEXTO */
+  --color-text-primary: #000000;
+  --color-text-on-dark: #ffffff;
+  --color-text-secondary: #757575;
+  --color-text-muted: #595959;
+
+  /* COLORES — ACENTO */
+  --color-accent: #00ec97;
+  --color-accent-light: #c7f5d8;
+  --color-accent-teal: #17d9d4;
+
+  /* COLORES — BORDES */
+  --color-border-dark: rgba(255, 255, 255, 0.35);
+  --color-border-light: #595959;
+  --color-border-card: #000000;
+  --color-border-rail: #ffffff;
+  --color-border-card-subtle: rgba(0, 0, 0, 0.1);
+
+  /* TIPOGRAFÍA — FAMILIAS
+     FKGrotesk es comercial (Fontwerk), NO la descargues de near.org.
+     Usa "Space Grotesk" (Google Fonts, open source) como placeholder
+     hasta que el equipo de diseño entregue los archivos licenciados. */
+  --font-family-primary: "Space Grotesk", sans-serif; /* placeholder de FKGrotesk */
+  --font-family-secondary: "Mona Sans", sans-serif;    /* self-hostear, ver layout.tsx */
+
+  /* TIPOGRAFÍA — TAMAÑOS */
+  --font-size-h1-display: 80px;
+  --line-height-h1-display: 80px;
+  --font-weight-h1-display: 400;
+
+  --font-size-h1-page: 40px;
+  --line-height-h1-page: 48px;
+  --font-weight-h1-page: 500;
+
+  --font-size-h2: 44px;
+  --line-height-h2: 48px;
+  --font-weight-h2: 500;
+
+  --font-size-h2-article: 24px;
+  --line-height-h2-article: 30px;
+  --font-weight-h2-article: 500;
+
+  --font-size-body-lg: 20px;
+  --line-height-body-lg: 28px;
+  --font-weight-body: 400;
+
+  --font-size-body: 16px;
+  --line-height-body: 24px;
+
+  --font-size-small: 14px;
+  --line-height-small: 21px;
+  --font-weight-small: 400;
+
+  /* ESPACIADO Y FORMA */
+  --border-radius: 4px;
+  --btn-padding-v: 8px;
+  --btn-padding-h: 8px;
+  --content-max-width: 1280px;
+  --article-max-width: 700px;
+  --section-max-width-wide: 1480px;
+  --section-padding-h: 112px;
+  --section-padding-v: 128px;
+  --nav-height: 73px;
+
+  /* BOTONES */
+  --btn-primary-bg: #ffffff;
+  --btn-primary-color: #000000;
+  --btn-primary-radius: 4px;
+  --btn-primary-font-size: 16px;
+  --btn-primary-font-weight: 500;
+  --btn-primary-transition: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+  --btn-secondary-bg: transparent;
+  --btn-secondary-color: #ffffff;
+  --btn-secondary-border: 1px solid #ffffff;
+  --btn-secondary-radius: 4px;
+
+  --btn-accent-bg: #00ec97;
+  --btn-accent-color: #ffffff;
+  --btn-accent-radius: 0px;
+
+  --link-color-dark: #ffffff;
+  --link-underline-color: #757575;
+  --link-color-secondary: #757575;
+}

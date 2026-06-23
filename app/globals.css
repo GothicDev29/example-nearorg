@@ -1,26 +1,206 @@
 @import "tailwindcss";
 
+/* Mona Sans — open source, SIL license, github.com/github/mona-sans */
+@font-face {
+  font-family: "Mona Sans";
+  src: url("/fonts/MonaSans-Variable.woff2") format("woff2 supports variations"),
+       url("/fonts/MonaSans-Variable.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Design tokens (source of truth: styles/tokens.css) ─── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+  /* COLORES — FONDOS */
+  --color-bg-primary: #ffffff;
+  --color-bg-dark: #000000;
+  --color-bg-cream: #faf9f5;
+  --color-bg-warm-white: #fffdf6;
+
+  /* COLORES — TEXTO */
+  --color-text-primary: #000000;
+  --color-text-on-dark: #ffffff;
+  --color-text-secondary: #757575;
+  --color-text-muted: #595959;
+
+  /* COLORES — ACENTO */
+  --color-accent: #00ec97;
+  --color-accent-light: #c7f5d8;
+  --color-accent-teal: #17d9d4;
+
+  /* COLORES — BORDES */
+  --color-border-dark: rgba(255, 255, 255, 0.35);
+  --color-border-light: #595959;
+  --color-border-card: #000000;
+  --color-border-rail: #ffffff;
+  --color-border-card-subtle: rgba(0, 0, 0, 0.1);
+
+  /* TIPOGRAFÍA — FAMILIAS */
+  --font-family-primary: "Space Grotesk", sans-serif;
+  --font-family-secondary: "Mona Sans", sans-serif;
+
+  /* TIPOGRAFÍA — TAMAÑOS */
+  --font-size-h1-display: 80px;
+  --line-height-h1-display: 80px;
+  --font-weight-h1-display: 400;
+
+  --font-size-h1-page: 40px;
+  --line-height-h1-page: 48px;
+  --font-weight-h1-page: 500;
+
+  --font-size-h2: 44px;
+  --line-height-h2: 48px;
+  --font-weight-h2: 500;
+
+  --font-size-h2-article: 24px;
+  --line-height-h2-article: 30px;
+  --font-weight-h2-article: 500;
+
+  --font-size-body-lg: 20px;
+  --line-height-body-lg: 28px;
+  --font-weight-body: 400;
+
+  --font-size-body: 16px;
+  --line-height-body: 24px;
+
+  --font-size-small: 14px;
+  --line-height-small: 21px;
+  --font-weight-small: 400;
+
+  /* ESPACIADO Y FORMA */
+  --border-radius: 4px;
+  --btn-padding-v: 8px;
+  --btn-padding-h: 8px;
+  --content-max-width: 1280px;
+  --article-max-width: 700px;
+  --section-max-width-wide: 1480px;
+  --section-padding-h: 112px;
+  --section-padding-v: 128px;
+  --nav-height: 73px;
+
+  /* BOTONES */
+  --btn-primary-bg: #ffffff;
+  --btn-primary-color: #000000;
+  --btn-primary-radius: 4px;
+  --btn-primary-font-size: 16px;
+  --btn-primary-font-weight: 500;
+  --btn-primary-transition: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+  --btn-secondary-bg: transparent;
+  --btn-secondary-color: #ffffff;
+  --btn-secondary-border: 1px solid #ffffff;
+  --btn-secondary-radius: 4px;
+
+  --btn-accent-bg: #00ec97;
+  --btn-accent-color: #ffffff;
+  --btn-accent-radius: 0px;
+
+  --link-color-dark: #ffffff;
+  --link-underline-color: #757575;
+  --link-color-secondary: #757575;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ─── Base styles ─── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  font-weight: var(--font-weight-body);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  margin: 0;
+}
+
+/* ─── Nav ─── */
+
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--section-padding-h);
+  background: var(--color-bg-dark);
+  border-bottom: 1px solid var(--color-border-dark);
+  z-index: 100;
+}
+
+.site-nav a {
+  color: var(--color-text-on-dark);
+  text-decoration: none;
+  font-size: var(--font-size-small);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  opacity: 0.7;
+  transition: opacity var(--btn-primary-transition);
+}
+
+.site-nav a:hover {
+  opacity: 1;
+}
+
+.site-nav .nav-brand {
+  font-family: var(--font-family-secondary);
+  font-size: 15px;
+  font-weight: 600;
+  opacity: 1;
+  margin-right: 32px;
+  color: var(--color-accent);
+}
+
+.site-nav .nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.main-content {
+  padding-top: var(--nav-height);
+}
+
+/* ─── Buttons ─── */
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: var(--btn-secondary-bg);
+  color: var(--btn-secondary-color);
+  border: var(--btn-secondary-border);
+  border-radius: var(--btn-secondary-radius);
+  font-family: var(--font-family-primary);
+  font-size: var(--btn-primary-font-size);
+  font-weight: var(--btn-primary-font-weight);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background var(--btn-primary-transition), color var(--btn-primary-transition);
+}
+
+.btn-secondary:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* ─── Reduced motion ─── */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
