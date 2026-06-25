@@ -396,7 +396,7 @@ export default function Exp2() {
           <p className="e2-eyebrow" style={{ fontSize: sm, color: acc, letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, marginBottom: 24, opacity: 0, fontFamily: "var(--font-family-secondary)" }}>
             near.org — open infrastructure
           </p>
-          <h1 style={{ fontSize: "clamp(48px, 7vw, 80px)", lineHeight: 1.0, fontWeight: 400, margin: "0 0 32px", fontFamily: "monospace" }}>
+          <h1 style={{ fontSize: "clamp(48px, 7vw, 80px)", lineHeight: 1.0, fontWeight: 700, letterSpacing: "-0.025em", margin: "0 0 32px", fontFamily: "var(--font-family-primary)" }}>
             <span ref={scrambleRefs[0]} style={{ display: "block" }}>&nbsp;</span>
             <span ref={scrambleRefs[1]} style={{ display: "block" }}>&nbsp;</span>
           </h1>
@@ -474,7 +474,7 @@ export default function Exp2() {
                     <p style={{ fontSize: "var(--font-size-body)", fontWeight: 600, color: acc }}>{item.label}</p>
                   </div>
                 </div>
-                <h2 style={{ fontSize: "var(--font-size-h2)", lineHeight: "var(--line-height-h2)", fontWeight: 500, marginBottom: 24 }}>{item.title}</h2>
+                <h2 style={{ fontSize: "var(--font-size-h2)", lineHeight: "var(--line-height-h2)", fontWeight: 600, letterSpacing: "-0.02em", marginBottom: 24 }}>{item.title}</h2>
                 <p style={{ fontSize: "var(--font-size-body-lg)", lineHeight: "var(--line-height-body-lg)", color: sec, maxWidth: 480, marginBottom: 32 }}>{item.body}</p>
                 <span style={{ display: "inline-block", padding: "4px 12px", border, borderRadius: 2, fontSize: sm, color: sec }}>{item.tag}</span>
               </div>
@@ -506,7 +506,7 @@ export default function Exp2() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 48, maxWidth: "var(--content-max-width)" }}>
             {STATS.map((stat, i) => (
               <div key={i}>
-                <div className="stat-val" style={{ fontSize: "clamp(40px, 5vw, 72px)", fontWeight: 400, lineHeight: 1, marginBottom: 12, color: acc, fontVariantNumeric: "tabular-nums" }}>0</div>
+                <div className="stat-val" style={{ fontSize: "clamp(40px, 5vw, 72px)", fontWeight: 700, letterSpacing: "-0.03em", lineHeight: 1, marginBottom: 12, color: "#fff", fontVariantNumeric: "tabular-nums" }}>0</div>
                 <p style={{ fontSize: "var(--font-size-body)", color: sec }}>{stat.label}</p>
               </div>
             ))}
@@ -522,11 +522,11 @@ export default function Exp2() {
       {/* ── S4: Integrations — cards stagger + marquee ── */}
       <section style={{ padding: `${padV} ${pad}`, borderTop: border, overflow: "hidden" }}>
         <p style={{ fontSize: sm, color: acc, letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, marginBottom: 16 }}>Built with the best</p>
-        <h2 style={{ fontSize: "var(--font-size-h2)", lineHeight: "var(--line-height-h2)", fontWeight: 500, marginBottom: 64, maxWidth: 480 }}>Trusted by 8+ industry leaders</h2>
+        <h2 style={{ fontSize: "var(--font-size-h2)", lineHeight: "var(--line-height-h2)", fontWeight: 600, letterSpacing: "-0.02em", marginBottom: 64, maxWidth: 480 }}>Trusted by 8+ industry leaders</h2>
         <div className="intg-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "1px", background: "var(--color-border-dark)", border, maxWidth: "var(--content-max-width)" }}>
           {INTEGRATIONS.map((item, idx) => (
             <div key={item.name} className="intg-card" style={{ padding: 32, background: "#000", opacity: 0 }}>
-              <p style={{ fontSize: sm, color: acc, fontFamily: "var(--font-family-secondary)", marginBottom: 12, fontWeight: 600 }}>
+              <p style={{ fontSize: sm, color: "rgba(255,255,255,0.3)", fontFamily: "var(--font-family-secondary)", marginBottom: 12, fontWeight: 500 }}>
                 {String(idx + 1).padStart(2, "0")}
               </p>
               <p style={{ fontWeight: 600, fontSize: "var(--font-size-body)", marginBottom: 8 }}>{item.name}</p>
@@ -558,7 +558,7 @@ export default function Exp2() {
           &ldquo;
         </div>
         <div style={{ position: "relative", zIndex: 1 }}>
-          <p className="expand-quote" style={{ fontSize: "clamp(28px, 3.5vw, 52px)", fontWeight: 400, lineHeight: 1.15, maxWidth: 720, marginBottom: 24, opacity: 0, letterSpacing: "0.18em" }}>
+          <p className="expand-quote" style={{ fontSize: "clamp(28px, 3.5vw, 52px)", fontWeight: 500, lineHeight: 1.15, maxWidth: 720, marginBottom: 24, opacity: 0, letterSpacing: "0.18em" }}>
             &ldquo;The infrastructure choices we make now will determine what is possible later.&rdquo;
           </p>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 56 }}>
@@ -577,7 +577,7 @@ export default function Exp2() {
         {/* Three product name display row */}
         <div className="s6-reveal" style={{ display: "flex", gap: "clamp(24px, 4vw, 80px)", flexWrap: "wrap", marginBottom: 48, opacity: 0 }}>
           {["near.com", "NEAR Intents", "NEAR AI"].map((name) => (
-            <span key={name} className="skew-target" style={{ fontSize: "clamp(48px, 6vw, 80px)", fontWeight: 500, lineHeight: 1.0, display: "inline-block", color: "#fff" }}>
+            <span key={name} className="skew-target" style={{ fontSize: "clamp(48px, 6vw, 80px)", fontWeight: 700, letterSpacing: "-0.025em", lineHeight: 1.0, display: "inline-block", color: "#fff" }}>
               {name}
             </span>
           ))}
@@ -664,7 +664,7 @@ export default function Exp2() {
           {/* Left: text content */}
           <div className="s9-content" style={{ opacity: 0 }}>
             <p style={{ fontSize: sm, color: acc, letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, marginBottom: 24 }}>A different approach</p>
-            <h2 style={{ fontSize: "var(--font-size-h2)", lineHeight: "var(--line-height-h2)", fontWeight: 500, maxWidth: 640, marginBottom: 24 }}>
+            <h2 style={{ fontSize: "var(--font-size-h2)", lineHeight: "var(--line-height-h2)", fontWeight: 600, letterSpacing: "-0.02em", maxWidth: 640, marginBottom: 24 }}>
               Chain abstraction isn&apos;t a feature — it&apos;s the foundation.
             </h2>
             <p style={{ fontSize: "var(--font-size-body-lg)", color: sec, maxWidth: 520, lineHeight: "var(--line-height-body-lg)" }}>
@@ -689,7 +689,7 @@ export default function Exp2() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 48, maxWidth: "var(--content-max-width)", marginBottom: 80 }}>
           {ELASTIC_STATS.map((stat, i) => (
             <div key={i}>
-              <div className="elastic-num" style={{ fontSize: "clamp(40px, 5vw, 72px)", fontWeight: 400, lineHeight: 1, marginBottom: 12, color: acc, fontVariantNumeric: "tabular-nums", opacity: 0 }}>
+              <div className="elastic-num" style={{ fontSize: "clamp(40px, 5vw, 72px)", fontWeight: 700, letterSpacing: "-0.03em", lineHeight: 1, marginBottom: 12, color: "#fff", fontVariantNumeric: "tabular-nums", opacity: 0 }}>
                 —
               </div>
               <p style={{ fontSize: "var(--font-size-body)", color: sec }}>{stat.label}</p>
@@ -699,7 +699,7 @@ export default function Exp2() {
 
         {/* CTA section */}
         <div className="cta-section-content" style={{ borderTop: border, paddingTop: 80, opacity: 0 }}>
-          <h2 style={{ fontSize: "var(--font-size-h2)", lineHeight: "var(--line-height-h2)", fontWeight: 500, maxWidth: 640, marginBottom: 20 }}>
+          <h2 style={{ fontSize: "var(--font-size-h2)", lineHeight: "var(--line-height-h2)", fontWeight: 600, letterSpacing: "-0.02em", maxWidth: 640, marginBottom: 20 }}>
             Ready to build in the agent economy?
           </h2>
           <p style={{ fontSize: "var(--font-size-body-lg)", color: sec, lineHeight: "var(--line-height-body-lg)", maxWidth: 520, marginBottom: 48 }}>

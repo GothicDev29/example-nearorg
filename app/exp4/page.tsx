@@ -347,7 +347,7 @@ export default function Exp4() {
           <p className="art-tag" style={{ fontSize: sm, color: acc, letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, marginBottom: 24, opacity: 0 }}>
             {META.tag}
           </p>
-          <h1 className="art-title" style={{ fontSize: "clamp(32px, 4vw, 56px)", lineHeight: 1.15, fontWeight: 500, marginBottom: 32, opacity: 0, fontFamily: "var(--font-family-primary)" }}>
+          <h1 className="art-title" style={{ fontSize: "clamp(32px, 4vw, 56px)", lineHeight: 1.15, fontWeight: 700, letterSpacing: "-0.025em", marginBottom: 32, opacity: 0, fontFamily: "var(--font-family-primary)" }}>
             {META.title}
           </h1>
           <div className="art-meta" style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap", opacity: 0 }}>
@@ -384,7 +384,7 @@ export default function Exp4() {
                 </p>
                 <h2
                   className={headingClass(section.anim)}
-                  style={{ fontSize: "var(--font-size-h2-article)", lineHeight: "var(--line-height-h2-article)", fontWeight: 500, marginBottom: 32, fontFamily: "var(--font-family-primary)" }}
+                  style={{ fontSize: "var(--font-size-h2-article)", lineHeight: "var(--line-height-h2-article)", fontWeight: 600, letterSpacing: "-0.01em", marginBottom: 32, fontFamily: "var(--font-family-primary)" }}
                 >
                   {section.heading}
                 </h2>
@@ -559,7 +559,7 @@ export default function Exp4() {
                   <span style={{ fontSize: 11, padding: "3px 8px", border: borderFaint, borderRadius: 2, color: sec, fontFamily: "var(--font-family-secondary)", display: "inline-block", marginBottom: 16 }}>
                     {art.tag}
                   </span>
-                  <h3 style={{ fontSize: "var(--font-size-body-lg)", lineHeight: "var(--line-height-body-lg)", fontWeight: 500, margin: "0 0 16px", fontFamily: "var(--font-family-primary)" }}>
+                  <h3 style={{ fontSize: "var(--font-size-body-lg)", lineHeight: "var(--line-height-body-lg)", fontWeight: 600, margin: "0 0 16px", fontFamily: "var(--font-family-primary)" }}>
                     {art.title}
                   </h3>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
@@ -577,7 +577,7 @@ export default function Exp4() {
           <div style={{ maxWidth: 560 }}>
             <h2
               className="nl-heading"
-              style={{ fontSize: "var(--font-size-h2)", lineHeight: "var(--line-height-h2)", fontWeight: 500, marginBottom: 16, opacity: 0, position: "relative", display: "inline-block", fontFamily: "var(--font-family-primary)" }}
+              style={{ fontSize: "var(--font-size-h2)", lineHeight: "var(--line-height-h2)", fontWeight: 600, letterSpacing: "-0.02em", marginBottom: 16, opacity: 0, position: "relative", display: "inline-block", fontFamily: "var(--font-family-primary)" }}
             >
               Stay ahead of the protocol
               <span

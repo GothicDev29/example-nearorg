@@ -25,6 +25,7 @@ const experiments = [
   { href: "/exp2", label: "exp2 — NEAR Stack" },
   { href: "/exp3", label: "exp3 — Ecosystem" },
   { href: "/exp4", label: "exp4 — Blog article" },
+  { href: "/exp5", label: "exp5 — Developer Platform" },
 ];
 
 export default function RootLayout({

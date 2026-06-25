@@ -47,17 +47,14 @@ const STATS = [
 
 const FEATURES = [
   {
-    icon: "⛓",
     title: "Chain Abstraction",
     desc: "One account, any chain. NEAR Intents routes across 35+ networks with sub-cent fees.",
   },
   {
-    icon: "🔒",
     title: "Private Execution",
     desc: "TEE-secured enclaves ensure not even the host can read your agent's logic or data.",
   },
   {
-    icon: "🤖",
     title: "AI Native",
     desc: "Agents with hardware guarantees — built for a world where AI runs critical infrastructure.",
   },
@@ -813,7 +810,8 @@ export default function Exp1() {
             style={{
               fontSize: "var(--font-size-h2)",
               lineHeight: "var(--line-height-h2)",
-              fontWeight: 400,
+              fontWeight: 600,
+              letterSpacing: "-0.02em",
               marginBottom: 56,
               maxWidth: 680,
               opacity: 0,
@@ -844,8 +842,8 @@ export default function Exp1() {
                 <div
                   style={{
                     fontSize: 28,
-                    fontWeight: 700,
-                    color: acc,
+                    fontWeight: 500,
+                    color: "rgba(255,255,255,0.25)",
                     marginBottom: 16,
                     fontFamily: "var(--font-family-secondary)",
                   }}
@@ -933,7 +931,8 @@ export default function Exp1() {
               style={{
                 fontSize: "var(--font-size-h2)",
                 lineHeight: "var(--line-height-h2)",
-                fontWeight: 500,
+                fontWeight: 600,
+                letterSpacing: "-0.02em",
                 maxWidth: 640,
                 marginBottom: 24,
               }}
@@ -1019,7 +1018,8 @@ export default function Exp1() {
           <h2
             style={{
               fontSize: "clamp(36px, 5vw, 64px)",
-              fontWeight: 400,
+              fontWeight: 600,
+              letterSpacing: "-0.025em",
               lineHeight: 1.1,
               maxWidth: 720,
               marginBottom: 64,
@@ -1047,13 +1047,13 @@ export default function Exp1() {
                   opacity: 0,
                 }}
               >
-                <div style={{ fontSize: 28, marginBottom: 16 }}>{f.icon}</div>
+                <div style={{ width: 24, height: 2, background: acc, marginBottom: 20 }} />
                 <div
                   style={{
                     fontSize: "var(--font-size-body)",
                     fontWeight: 600,
                     marginBottom: 10,
-                    color: acc,
+                    color: "#fff",
                   }}
                 >
                   {f.title}
@@ -1096,7 +1096,8 @@ export default function Exp1() {
           <h2
             style={{
               fontSize: "clamp(40px, 6vw, 80px)",
-              fontWeight: 400,
+              fontWeight: 700,
+              letterSpacing: "-0.025em",
               lineHeight: 1,
               display: "flex",
               flexWrap: "wrap",
@@ -1208,7 +1209,8 @@ export default function Exp1() {
             style={{
               fontSize: "var(--font-size-h2)",
               lineHeight: "var(--line-height-h2)",
-              fontWeight: 500,
+              fontWeight: 600,
+              letterSpacing: "-0.02em",
               maxWidth: 560,
               marginBottom: 24,
             }}
@@ -1348,7 +1350,8 @@ export default function Exp1() {
             style={{
               fontSize: "var(--font-size-h2)",
               lineHeight: "var(--line-height-h2)",
-              fontWeight: 500,
+              fontWeight: 600,
+              letterSpacing: "-0.02em",
               marginBottom: 24,
             }}
           >
@@ -1453,7 +1456,8 @@ export default function Exp1() {
             style={{
               fontSize: "var(--font-size-h2)",
               lineHeight: "var(--line-height-h2)",
-              fontWeight: 500,
+              fontWeight: 600,
+              letterSpacing: "-0.02em",
               marginBottom: 24,
             }}
           >
@@ -1627,7 +1631,8 @@ export default function Exp1() {
           ref={gradientRef}
           style={{
             fontSize: "clamp(36px, 5vw, 72px)",
-            fontWeight: 400,
+            fontWeight: 600,
+            letterSpacing: "-0.025em",
             lineHeight: 1.15,
             maxWidth: 880,
             background: "linear-gradient(90deg, var(--color-accent) 0%, #fff 40%, rgba(255,255,255,0.3) 100%)",
@@ -1755,7 +1760,8 @@ export default function Exp1() {
             <h2
               style={{
                 fontSize: "clamp(36px, 5vw, 64px)",
-                fontWeight: 400,
+                fontWeight: 600,
+                letterSpacing: "-0.025em",
                 maxWidth: 640,
                 lineHeight: 1.1,
                 marginBottom: 0,

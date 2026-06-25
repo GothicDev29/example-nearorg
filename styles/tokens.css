@@ -34,15 +34,15 @@
   /* TIPOGRAFÍA — TAMAÑOS */
   --font-size-h1-display: 80px;
   --line-height-h1-display: 80px;
-  --font-weight-h1-display: 400;
+  --font-weight-h1-display: 700;
 
   --font-size-h1-page: 40px;
   --line-height-h1-page: 48px;
-  --font-weight-h1-page: 500;
+  --font-weight-h1-page: 700;
 
   --font-size-h2: 44px;
-  --line-height-h2: 48px;
-  --font-weight-h2: 500;
+  --line-height-h2: 52px;
+  --font-weight-h2: 600;
 
   --font-size-h2-article: 24px;
   --line-height-h2-article: 30px;

@@ -363,7 +363,7 @@ export default function Exp3() {
           {/* Left: headline + sub + CTAs */}
           <div style={{ flex: "1 1 0" }}>
             <p style={{ fontSize: sm, color: acc, letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, marginBottom: 24 }}>Ecosystem</p>
-            <h1 style={{ fontSize: "clamp(40px, 6vw, 72px)", fontWeight: 400, lineHeight: 1.0, margin: "0 0 32px", maxWidth: 760, perspective: 800 }}>
+            <h1 style={{ fontSize: "clamp(40px, 6vw, 72px)", fontWeight: 700, letterSpacing: "-0.025em", lineHeight: 1.0, margin: "0 0 32px", maxWidth: 760, perspective: 800 }}>
               {["Connect with developers,", "founders, and AI-focused", "projects."].map((line, i) => (
                 <span key={i} className="e3-hero-line" style={{ display: "block", opacity: 0 }}>{line}</span>
               ))}
@@ -402,7 +402,7 @@ export default function Exp3() {
                 className="e3-stat-badge"
                 style={{ opacity: 0, padding: "16px 24px", border: "1px solid rgba(255,255,255,0.18)", borderRadius: 4, backdropFilter: "blur(4px)", background: "rgba(255,255,255,0.04)" }}
               >
-                <div style={{ fontSize: "clamp(28px,3vw,40px)", fontWeight: 400, color: "#fff", lineHeight: 1.0, marginBottom: 4 }}>
+                <div style={{ fontSize: "clamp(28px,3vw,40px)", fontWeight: 700, letterSpacing: "-0.02em", color: "#fff", lineHeight: 1.0, marginBottom: 4 }}>
                   <span style={{ color: acc }}>{badge.value}</span> {badge.label}
                 </div>
                 <div style={{ fontSize: sm, color: sec, fontFamily: "var(--font-family-secondary)" }}>{badge.sub}</div>
@@ -562,10 +562,10 @@ export default function Exp3() {
               <div style={{ padding: "28px 32px 32px", display: "flex", flexDirection: "column", justifyContent: "space-between", flex: 1 }}>
                 <div>
                   <span style={{ fontSize: 11, padding: "3px 10px", border: "1px solid rgba(255,255,255,0.18)", borderRadius: 2, color: sec, fontFamily: "var(--font-family-secondary)" }}>{proj.tag}</span>
-                  <h3 style={{ fontSize: "var(--font-size-h2)", fontWeight: 500, marginTop: 20, lineHeight: 1.1 }}>{proj.name}</h3>
+                  <h3 style={{ fontSize: "var(--font-size-h2)", fontWeight: 700, letterSpacing: "-0.02em", marginTop: 20, lineHeight: 1.1 }}>{proj.name}</h3>
                 </div>
                 <div>
-                  <div style={{ fontSize: "clamp(36px, 4vw, 56px)", fontWeight: 400, color: acc, lineHeight: 1, marginBottom: 8 }}>{proj.stat}</div>
+                  <div style={{ fontSize: "clamp(36px, 4vw, 56px)", fontWeight: 700, letterSpacing: "-0.03em", color: acc, lineHeight: 1, marginBottom: 8 }}>{proj.stat}</div>
                   <p style={{ fontSize: sm, color: sec }}>{proj.statLabel}</p>
                 </div>
               </div>
@@ -578,7 +578,7 @@ export default function Exp3() {
       {/* ── S5: Bar chart — Ecosystem by category ───────────────────────── */}
       <section className="chart-section" style={{ padding: `${padV} ${pad}`, borderTop: border }}>
         <p style={{ fontSize: sm, color: acc, letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, marginBottom: 16 }}>Ecosystem by category</p>
-        <h2 style={{ fontSize: "var(--font-size-h2)", lineHeight: "var(--line-height-h2)", fontWeight: 500, marginBottom: 56, maxWidth: 480 }}>
+        <h2 style={{ fontSize: "var(--font-size-h2)", lineHeight: "var(--line-height-h2)", fontWeight: 600, letterSpacing: "-0.02em", marginBottom: 56, maxWidth: 480 }}>
           30 projects across 6 categories
         </h2>
 
@@ -681,7 +681,7 @@ export default function Exp3() {
       {/* ── S7: 3D mouse tilt gallery ───────────────────────────────────── */}
       <section style={{ padding: `${padV} ${pad}`, borderTop: border }}>
         <p style={{ fontSize: sm, color: acc, letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, marginBottom: 16 }}>Gallery — hover to tilt</p>
-        <h2 style={{ fontSize: "var(--font-size-h2)", lineHeight: "var(--line-height-h2)", fontWeight: 500, marginBottom: 56, maxWidth: 480 }}>
+        <h2 style={{ fontSize: "var(--font-size-h2)", lineHeight: "var(--line-height-h2)", fontWeight: 600, letterSpacing: "-0.02em", marginBottom: 56, maxWidth: 480 }}>
           Three pillars of the NEAR ecosystem
         </h2>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16, maxWidth: "var(--content-max-width)" }}>
@@ -725,7 +725,7 @@ export default function Exp3() {
       {/* ── S8: MotionPath — value flows across chains ───────────────────── */}
       <section style={{ padding: `${padV} ${pad}`, borderTop: border, position: "relative", minHeight: "60vh", overflow: "hidden" }}>
         <p style={{ fontSize: sm, color: acc, letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, marginBottom: 24 }}>NEAR in motion</p>
-        <h2 style={{ fontSize: "var(--font-size-h2)", lineHeight: "var(--line-height-h2)", fontWeight: 500, maxWidth: 480, marginBottom: 56 }}>
+        <h2 style={{ fontSize: "var(--font-size-h2)", lineHeight: "var(--line-height-h2)", fontWeight: 600, letterSpacing: "-0.02em", maxWidth: 480, marginBottom: 56 }}>
           Value flows across chains, continuously.
         </h2>
 
@@ -779,7 +779,7 @@ export default function Exp3() {
       {/* ── S9: Orbiting elements — The NEAR community ──────────────────── */}
       <section style={{ padding: `${padV} ${pad}`, borderTop: border, display: "flex", flexDirection: "column", alignItems: "center" }}>
         <p style={{ fontSize: sm, color: acc, letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, marginBottom: 16 }}>The NEAR community</p>
-        <h2 style={{ fontSize: "var(--font-size-h2)", lineHeight: "var(--line-height-h2)", fontWeight: 500, textAlign: "center", maxWidth: 480, marginBottom: 80 }}>
+        <h2 style={{ fontSize: "var(--font-size-h2)", lineHeight: "var(--line-height-h2)", fontWeight: 600, letterSpacing: "-0.02em", textAlign: "center", maxWidth: 480, marginBottom: 80 }}>
           Built for a global developer community
         </h2>
 
@@ -840,7 +840,7 @@ export default function Exp3() {
       <section style={{ padding: `${padV} 0`, borderTop: border, overflow: "hidden" }}>
         <div style={{ paddingLeft: pad, marginBottom: 36 }}>
           <p style={{ fontSize: sm, color: acc, letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, marginBottom: 12 }}>Get building</p>
-          <h2 style={{ fontSize: "var(--font-size-h2)", lineHeight: "var(--line-height-h2)", fontWeight: 500 }}>
+          <h2 style={{ fontSize: "var(--font-size-h2)", lineHeight: "var(--line-height-h2)", fontWeight: 600, letterSpacing: "-0.02em" }}>
             Explore the ecosystem — <span style={{ color: sec, fontWeight: 400 }}>drag to explore</span>
           </h2>
         </div>
@@ -885,7 +885,7 @@ export default function Exp3() {
           style={{ margin: `64px ${pad} 0`, padding: "64px 56px", border, borderRadius: 4, background: "#050505", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 32 }}
         >
           <div>
-            <h2 style={{ fontSize: "clamp(28px, 3.5vw, 44px)", fontWeight: 400, lineHeight: 1.1, marginBottom: 12 }}>Ready to join?</h2>
+            <h2 style={{ fontSize: "clamp(28px, 3.5vw, 44px)", fontWeight: 600, letterSpacing: "-0.02em", lineHeight: 1.1, marginBottom: 12 }}>Ready to join?</h2>
             <p style={{ fontSize: "var(--font-size-body)", color: sec, maxWidth: 400 }}>
               Connect with the NEAR ecosystem and start building the next generation of decentralized applications.
             </p>

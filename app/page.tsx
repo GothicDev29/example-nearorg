@@ -1,4 +1,9 @@
+"use client";
+
 import Link from "next/link";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "../lib/gsap/register";
 
 const experiments = [
   {
@@ -25,11 +30,49 @@ const experiments = [
     title: "Blog — Confidential Intents (Feb 2026)",
     description: "Artículo real de near.org. Barra de progreso de lectura fija, divisores SVG line-draw, 5 técnicas distintas de reveal por heading, pull quote con acento.",
   },
+  {
+    href: "/exp5",
+    label: "exp5",
+    title: "Developer Platform",
+    description: "Variable font axis (Mona Sans 200↔750), text-as-SVG-mask video, canvas cursor trail, 3D CSS carousel, split-panel reveals, canvas particle attractor.",
+  },
 ];
 
 export default function Home() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    const mm = gsap.matchMedia();
+
+    mm.add("(prefers-reduced-motion: no-preference)", () => {
+      gsap.fromTo(".home-eyebrow",
+        { opacity: 0 },
+        { opacity: 1, duration: 0.5, delay: 0.1 }
+      );
+      gsap.fromTo(".home-title",
+        { opacity: 0, y: 24 },
+        { opacity: 1, y: 0, duration: 0.8, ease: "power3.out", delay: 0.2 }
+      );
+      gsap.fromTo(".home-sub",
+        { opacity: 0, y: 16 },
+        { opacity: 1, y: 0, duration: 0.65, ease: "power2.out", delay: 0.48 }
+      );
+      gsap.fromTo(".exp-item",
+        { opacity: 0, y: 18 },
+        { opacity: 1, y: 0, duration: 0.55, ease: "power3.out", stagger: 0.1, delay: 0.7 }
+      );
+    });
+
+    mm.add("(prefers-reduced-motion: reduce)", () => {
+      gsap.set([".home-eyebrow", ".home-title", ".home-sub", ".exp-item"], { opacity: 1, y: 0 });
+    });
+  }, { scope: containerRef });
+
+  const border = "1px solid var(--color-border-dark)";
+
   return (
     <div
+      ref={containerRef}
       style={{
         minHeight: "100dvh",
         backgroundColor: "var(--color-bg-dark)",
@@ -38,30 +81,49 @@ export default function Home() {
       }}
     >
       <p
+        className="home-eyebrow"
         style={{
           fontFamily: "var(--font-family-secondary)",
           fontSize: "var(--font-size-small)",
           color: "var(--color-accent)",
-          letterSpacing: "0.1em",
+          letterSpacing: "0.12em",
           textTransform: "uppercase",
-          marginBottom: "24px",
+          marginBottom: 24,
           fontWeight: 600,
+          opacity: 0,
         }}
       >
         near.org — motion R&D
       </p>
 
       <h1
+        className="home-title"
         style={{
-          fontSize: "var(--font-size-h1-page)",
-          lineHeight: "var(--line-height-h1-page)",
-          fontWeight: "var(--font-weight-h1-page)" as React.CSSProperties["fontWeight"],
-          maxWidth: "600px",
-          marginBottom: "80px",
+          fontSize: "clamp(48px, 6vw, 80px)",
+          lineHeight: 1.0,
+          fontWeight: 700,
+          letterSpacing: "-0.025em",
+          maxWidth: 600,
+          marginBottom: 20,
+          opacity: 0,
         }}
       >
         Animation experiments
       </h1>
+
+      <p
+        className="home-sub"
+        style={{
+          fontSize: "var(--font-size-body-lg)",
+          lineHeight: "var(--line-height-body-lg)",
+          color: "var(--color-text-secondary)",
+          maxWidth: 480,
+          marginBottom: 80,
+          opacity: 0,
+        }}
+      >
+        GSAP R&D for the near.org redesign — motion design proposals for each section of the site.
+      </p>
 
       <ul
         style={{
@@ -71,22 +133,23 @@ export default function Home() {
           display: "flex",
           flexDirection: "column",
           gap: "1px",
-          borderTop: "1px solid var(--color-border-dark)",
+          borderTop: border,
           maxWidth: "var(--content-max-width)",
         }}
       >
         {experiments.map((exp) => (
           <li
             key={exp.href}
-            style={{ borderBottom: "1px solid var(--color-border-dark)" }}
+            className="exp-item"
+            style={{ borderBottom: border, opacity: 0 }}
           >
             <Link
               href={exp.href}
               style={{
                 display: "flex",
                 alignItems: "baseline",
-                gap: "32px",
-                padding: "24px 0",
+                gap: 40,
+                padding: "28px 0",
                 textDecoration: "none",
                 color: "inherit",
               }}
@@ -96,7 +159,7 @@ export default function Home() {
                   fontFamily: "var(--font-family-secondary)",
                   fontSize: "var(--font-size-small)",
                   color: "var(--color-text-secondary)",
-                  minWidth: "48px",
+                  minWidth: 48,
                   fontWeight: 500,
                 }}
               >
@@ -107,8 +170,9 @@ export default function Home() {
                   style={{
                     display: "block",
                     fontSize: "var(--font-size-h2-article)",
-                    fontWeight: 500,
-                    marginBottom: "4px",
+                    fontWeight: 600,
+                    marginBottom: 6,
+                    letterSpacing: "-0.01em",
                   }}
                 >
                   {exp.title}
@@ -117,6 +181,7 @@ export default function Home() {
                   style={{
                     fontSize: "var(--font-size-small)",
                     color: "var(--color-text-secondary)",
+                    lineHeight: "1.5",
                   }}
                 >
                   {exp.description}
@@ -126,7 +191,9 @@ export default function Home() {
                 style={{
                   marginLeft: "auto",
                   color: "var(--color-accent)",
-                  fontSize: "20px",
+                  fontSize: 18,
+                  fontWeight: 300,
+                  flexShrink: 0,
                 }}
               >
                 →
